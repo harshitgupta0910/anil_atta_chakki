@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Clock, MapPin, Phone, Award, Users, Wheat , Instagram, Facebook, Mail } from "lucide-react";
 import chakkiImage from "@/assets/hero-chakki.jpg";
 import owner from "@/assets/owner.jpg";
+import owner2 from "@/assets/owner2.jpg";
 import { motion } from "framer-motion";
 
 const fadeUp = {
@@ -65,7 +66,7 @@ const About = () => {
             className="relative w-full max-w-md mx-auto my-6 hover:scale-105 transition-transform duration-500"
           >
             <img
-              src={owner}
+              src={owner2}
               alt="Owner"
               className="w-full h-[450px] object-cover rounded-lg shadow-xl"
             />

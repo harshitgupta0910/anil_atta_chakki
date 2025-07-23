@@ -175,7 +175,7 @@ const Account = () => {
                           Order History
                         </CardTitle>
                       </CardHeader>
-                      <CardContent>
+                      {/* <CardContent>
                         <div className="space-y-4">
                           {orders.map((order, index) => (
                             <motion.div
@@ -242,7 +242,7 @@ const Account = () => {
                             <p className="text-muted-foreground">No orders yet</p>
                           </div>
                         )}
-                      </CardContent>
+                      </CardContent> */}
                     </Card>
                   </motion.div>
                 </TabsContent>

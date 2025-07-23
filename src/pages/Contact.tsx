@@ -118,7 +118,7 @@ const Contact = () => {
                   }, {
                     icon: <Phone className="h-6 w-6 text-wheat-gold mt-1" />, label: "Phone", text: "+91 92360 99338"
                   }, {
-                    icon: <Mail className="h-6 w-6 text-wheat-gold mt-1" />, label: "Email", text: "anilattachakki@gmail.com"
+                    icon: <Mail className="h-6 w-6 text-wheat-gold mt-1" />, label: "Email", text: "naveenguptastore902@gmail.com"
                   }, {
                     icon: <Clock className="h-6 w-6 text-wheat-gold mt-1" />, label: "Business Hours", text: "Monday - Sunday: 8:00 AM - 9:00 PM"
                   }].map((info, i) => (
