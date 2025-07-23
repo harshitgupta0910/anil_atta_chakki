@@ -1,0 +1,307 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Anil Atta Chakki - Traditional flour mill design system
+All colors MUST be HSL. Organic, warm, and natural color palette.
+*/
+
+@layer base {
+  :root {
+    /* Natural flour mill color palette */
+    --background: 45 20% 98%;
+    --foreground: 25 30% 15%;
+
+    --card: 40 25% 96%;
+    --card-foreground: 25 30% 15%;
+
+    --popover: 40 25% 96%;
+    --popover-foreground: 25 30% 15%;
+
+    /* Warm brown primary - represents traditional chakki */
+    --primary: 25 35% 25%;
+    --primary-foreground: 45 40% 95%;
+
+    /* Cream secondary - represents fresh flour */
+    --secondary: 40 30% 90%;
+    --secondary-foreground: 25 35% 25%;
+
+    /* Light wheat color */
+    --muted: 40 25% 92%;
+    --muted-foreground: 30 20% 45%;
+
+    /* Golden wheat accent */
+    --accent: 35 60% 75%;
+    --accent-foreground: 25 35% 25%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 45 40% 95%;
+
+    --border: 35 20% 85%;
+    --input: 35 20% 90%;
+    --ring: 25 35% 25%;
+
+    /* Custom design tokens for flour mill theme */
+    --wheat-gold: 45 75% 65%;
+    --flour-white: 45 40% 95%;
+    --chakki-brown: 20 40% 20%;
+    --grain-beige: 40 30% 85%;
+    
+    /* Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(45 60% 88%), hsl(35 50% 82%));
+    --gradient-card: linear-gradient(180deg, hsl(40 25% 96%), hsl(35 20% 94%));
+    --gradient-button: linear-gradient(135deg, hsl(25 35% 25%), hsl(20 40% 20%));
+    
+    /* Shadows with warm tones */
+    --shadow-warm: 0 4px 20px hsl(25 35% 25% / 0.1);
+    --shadow-glow: 0 0 30px hsl(45 75% 65% / 0.3);
+    
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    /* Dark mode with warm browns and golds */
+    --background: 20 25% 8%;
+    --foreground: 45 40% 95%;
+
+    --card: 20 30% 12%;
+    --card-foreground: 45 40% 95%;
+
+    --popover: 20 30% 12%;
+    --popover-foreground: 45 40% 95%;
+
+    --primary: 45 75% 65%;
+    --primary-foreground: 20 25% 8%;
+
+    --secondary: 25 20% 18%;
+    --secondary-foreground: 45 40% 95%;
+
+    --muted: 25 15% 15%;
+    --muted-foreground: 40 25% 70%;
+
+    --accent: 35 60% 65%;
+    --accent-foreground: 20 25% 8%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 45 40% 95%;
+
+    --border: 25 20% 20%;
+    --input: 25 20% 18%;
+    --ring: 45 75% 65%;
+
+    /* Dark mode custom tokens */
+    --wheat-gold: 45 85% 70%;
+    --flour-white: 45 30% 85%;
+    --chakki-brown: 15 40% 15%;
+    --grain-beige: 35 20% 25%;
+    
+    /* Dark gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(20 30% 12%), hsl(25 25% 15%));
+    --gradient-card: linear-gradient(180deg, hsl(20 30% 12%), hsl(15 25% 10%));
+    --gradient-button: linear-gradient(135deg, hsl(45 75% 65%), hsl(40 70% 60%));
+    
+    /* Dark shadows */
+    --shadow-warm: 0 4px 20px hsl(0 0% 0% / 0.3);
+    --shadow-glow: 0 0 30px hsl(45 75% 65% / 0.2);
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Global fade-in animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Hero or Section Entrance Animation */
+.fade-in-up {
+  animation: fadeInUp 0.8s ease-out both;
+}
+
+.fade-in {
+  animation: fadeIn 1.2s ease-out both;
+}
+
+/* Product card hover animation */
+.product-card {
+  @apply rounded-2xl shadow-xl border border-border bg-white transition-all duration-500;
+}
+.product-card:hover {
+  @apply scale-[1.025] shadow-2xl border-primary;
+}
+
+/* Button animations */
+.btn-chakki {
+  @apply bg-[#8B5E3C] text-white hover:bg-[#a6724b] transition duration-300 shadow-md hover:shadow-lg font-semibold;
+}
+
+.btn-wheat {
+  @apply border border-[#C19A6B] text-[#8B5E3C] hover:bg-[#C19A6B]/10 hover:text-[#8B5E3C] transition duration-300 font-medium;
+}
+
+/* Glow effect for icons or highlights */
+.glow {
+  box-shadow: 0 0 15px rgba(255, 215, 0, 0.5);
+}
+
+/* Section background gradient */
+.section-gradient {
+  @apply bg-gradient-to-br from-[#F9F4EF] via-[#FFF8E7] to-[#F5EBDD];
+}
+
+/* Services card warm theme */
+.card-warm {
+  @apply bg-gradient-to-br from-[#FFF2E1] to-[#FFE8D6] border border-[#F5D5A5] shadow-lg rounded-xl transition-all duration-500;
+}
+.card-warm:hover {
+  @apply scale-105 border-[#E3B778] shadow-2xl;
+}
+
+/* Badge styling for "Service" and others */
+.bg-wheat-gold {
+  background-color: #eac784;
+}
+.text-chakki-brown {
+  color: #8B5E3C;
+}
+
+/* Text transitions */
+.fade-text {
+  @apply transition-opacity duration-700 ease-in-out;
+}
+
+/* Scroll reveal animations (combined with JS or IntersectionObserver if needed) */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Responsive container padding fix */
+.container {
+  @apply px-4 sm:px-6 lg:px-8;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@layer components {
+  /* Custom button variants for chakki theme */
+  .btn-chakki {
+    @apply bg-gradient-to-r from-primary to-chakki-brown text-primary-foreground hover:shadow-glow;
+    transition: var(--transition-smooth);
+  }
+  
+  .btn-wheat {
+    @apply bg-gradient-to-r from-accent to-wheat-gold text-accent-foreground hover:scale-105;
+    transition: var(--transition-bounce);
+  }
+  
+  /* Card styles with warm gradients */
+  .card-warm {
+    background: var(--gradient-card);
+    box-shadow: var(--shadow-warm);
+    @apply border border-border/50;
+  }
+  
+  /* Flour particle animation background */
+  .flour-particles {
+    background-image: radial-gradient(2px 2px at 20px 30px, hsl(var(--wheat-gold) / 0.3), transparent),
+                      radial-gradient(2px 2px at 40px 70px, hsl(var(--flour-white) / 0.4), transparent),
+                      radial-gradient(1px 1px at 90px 40px, hsl(var(--grain-beige) / 0.2), transparent);
+    animation: float 20s ease-in-out infinite;
+  }
+  
+  /* Chakki wheel spinning animation */
+  .chakki-spin {
+    animation: spin 3s linear infinite;
+  }
+  
+  /* Product hover effects */
+  .product-card {
+    @apply card-warm transition-all duration-300 hover:scale-105 hover:shadow-lg cursor-pointer;
+  }
+  
+  /* Floating animation for flour particles */
+  @keyframes float {
+    0%, 100% { transform: translateY(0px) rotate(0deg); }
+    33% { transform: translateY(-30px) rotate(120deg); }
+    66% { transform: translateY(-15px) rotate(240deg); }
+  }
+  
+  /* Grain falling animation */
+  @keyframes grain-fall {
+    0% { transform: translateY(-100px) rotate(0deg); opacity: 0; }
+    10% { opacity: 1; }
+    90% { opacity: 1; }
+    100% { transform: translateY(100vh) rotate(360deg); opacity: 0; }
+  }
+  
+  /* Gentle pulse for important elements */
+  @keyframes gentle-pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.8; }
+  }
+  
+  /* Hero gradient background */
+  .hero-gradient {
+    background: var(--gradient-hero);
+  }
+}
