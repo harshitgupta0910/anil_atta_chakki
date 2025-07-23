@@ -1,73 +1,89 @@
-# Welcome to your Lovable project
+# 🌾 Anil Atta Chakki - Official Website
 
-## Project info
+Welcome to the official website of **Anil Atta Chakki**, a trusted and traditional flour mill serving quality since 2000. This website offers a clean, responsive, and animated user experience built with modern web technologies.
 
-**URL**: https://lovable.dev/projects/39221374-b030-41bb-b811-fe357f873ac5
+## 🔗 Live Site
 
-## How can I edit this code?
+[Visit Live Website](https://your-deployed-url.com)
 
-There are several ways of editing your application.
+---
 
-**Use Lovable**
+## 🚀 Features
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/39221374-b030-41bb-b811-fe357f873ac5) and start prompting.
+- 🏠 Beautiful and animated homepage
+- 🛍️ Product listing with cart functionality
+- 🧾 Checkout and customer details
+- 📞 Contact form with integrated EmailJS
+- 📍 Google Maps integration for location access
+- 📱 Fully responsive (mobile, tablet, and desktop)
+- 🌗 Light and dark theme support
+- ✨ Smooth animations using Framer Motion
 
-Changes made via Lovable will be committed automatically to this repo.
+---
 
-**Use your preferred IDE**
+## 🛠 Tech Stack
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+- **Frontend**: React.js + Vite
+- **Styling**: Tailwind CSS
+- **Icons**: Lucide React
+- **State Management**: Context API (Cart, Orders)
+- **Email Service**: EmailJS
+- **Routing**: React Router DOM
+- **Animations**: Framer Motion
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+---
 
-Follow these steps:
+## 📁 Folder Structure (Frontend)
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+src/
+│
+├── assets/ # Images & media
+├── components/ # Reusable UI components
+├── contexts/ # Cart & Order providers
+├── pages/ # Main page components (Home, About, Contact)
+├── App.jsx # Root app
+├── main.jsx # Entry point
+└── routes.jsx # Routes config
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+yaml
+Copy
+Edit
 
-# Step 3: Install the necessary dependencies.
-npm i
+---
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+## 📦 Installation
+
+### 1. Clone the repo
+
+```bash
+git clone https://github.com/your-username/anil-atta-chakki.git
+cd anil-atta-chakki
+2. Install dependencies
+bash
+Copy
+Edit
+npm install
+3. Configure EmailJS (for contact form)
+Create an account at EmailJS
+
+Set up a service, template, and get:
+
+SERVICE_ID
+
+TEMPLATE_ID
+
+PUBLIC_KEY
+
+Create a .env file and add:
+
+ini
+Copy
+Edit
+VITE_EMAILJS_SERVICE_ID=your_service_id
+VITE_EMAILJS_TEMPLATE_ID=your_template_id
+VITE_EMAILJS_PUBLIC_KEY=your_public_key
+4. Run locally
+bash
+Copy
+Edit
 npm run dev
-```
-
-**Edit a file directly in GitHub**
-
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/39221374-b030-41bb-b811-fe357f873ac5) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
